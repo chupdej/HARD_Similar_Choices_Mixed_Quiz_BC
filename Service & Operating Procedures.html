@@ -362,11 +362,11 @@ function renderEnd() {
   const pct = Math.round((correctCount / total) * 100);
   const duration = Math.round((Date.now() - startTime) / 1000);
   let msg, emoji;
-  if (pct >= 90) { msg = 'ยอดเยี่ยม! พร้อมสอบจริง'; emoji = '🏆'; }
-  else if (pct >= 75) { msg = 'ดีมาก เกือบพร้อมแล้ว'; emoji = '🎉'; }
-  else if (pct >= 60) { msg = 'ผ่านเกณฑ์ ฝึกเพิ่มอีกนิด'; emoji = '👍'; }
-  else if (pct >= 40) { msg = 'ยังต้องอ่านเพิ่ม สู้ๆ'; emoji = '📖'; }
-  else { msg = 'อ่านเนื้อหาใหม่ก่อนนะ'; emoji = '💪'; }
+  if (pct >= 100) { msg = 'BC is calling เต็ม100ได้100 เออ เริ่ด!!!'; emoji = '🏆'; }
+  else if (pct >= 95) { msg = 'ตัวเเม่ตัวมัมตัวBCมาก เจ๋งแจ่มแจ๋ว'; emoji = '🎉'; }
+  else if (pct >= 90) { msg = 'หลบหน่อย คนสวยจะเป็นพี่BCเด้อ'; emoji = '🎉'; }
+  else if (pct >= 80) { msg = 'ผ่านล่ะแม่ ดีจุยด้วย'; emoji = '🎉'; }
+  else { msg = 'อ่านใหม่ก่อนๆคุณแม่'; emoji = '💪'; }
   
   const wrongHtml = wrongAnswers.length === 0
     ? `<div class="no-wrong">🌟 ตอบถูกทุกข้อ! ไม่มีข้อให้ทบทวน</div>`
