@@ -298,7 +298,7 @@ function renderQuestion() {
   answered = false;
   const q = QUESTIONS[order[cur]];
   updateStats();
-  const subjTag = (IS_HARD && q.subject) ? `<span class="subj-tag">${escapeHtml(q.subject.split('_')[0].replace('QAB','A').replace('QAC','B').replace('QBA','C').replace('QBB','D'))}</span>` : '';
+  const subjTag = (IS_HARD && q.subject) ? `<span class="subj-tag">${escapeHtml(q.subject.split('_')[0].replace('QAB','Rule & Reg').replace('QAC','Safe & Sec').replace('QBA','Ser & Op').replace('QBB','F&B'))}</span>` : '';
   const qNumCls = IS_HARD ? 'qnum hard' : 'qnum';
   $('mainArea').innerHTML = `
     <div class="question-card">
@@ -386,7 +386,7 @@ function renderEnd() {
         ${wrongAnswers.map(w => {
           const correctText = w.q[w.correctAnswer.toLowerCase()];
           const userText = w.q[w.userAnswer.toLowerCase()];
-          const subjTag = (IS_HARD && w.q.subject) ? `<span class="wq-subj">${escapeHtml(w.q.subject.split('_')[0].replace('QAB','A').replace('QAC','B').replace('QBA','C').replace('QBB','D'))}</span>` : '';
+          const subjTag = (IS_HARD && w.q.subject) ? `<span class="wq-subj">${escapeHtml(w.q.subject.split('_')[0].replace('QAB','Rule & Reg').replace('QAC','Safe & Sec').replace('QBA','Ser & Op').replace('QBB','F&B'))}</span>` : '';
           return `
             <div class="wrong-item">
               <div class="wq">
